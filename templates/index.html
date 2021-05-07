@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>SedaBasaran AloTech Proje Ödevi 2</title>
+  </head>
+  <body>
+      {% extends "template.html" %}
+      {% block content %} 
+
+       <form action="{{ url_for('alotech') }}" method="post"> 
+           <label for="start">Start Date:</label>
+           <input type="date" id="start" name="startDate" value="2017-08-01" min="2017-08-01" max="2017-08-04">
+           <label for="start">End Date:</label>
+           <input type="date" id="start" name="endDate" value="2017-08-04" min="2017-08-01" max="2017-08-04">
+           <button type="submit">Submit</button> 
+        </form> 
+
+      {% endblock %}
+
+  </body>
+</html>

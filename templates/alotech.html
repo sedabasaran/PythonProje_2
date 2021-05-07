@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>SedaBasaran AloTech Proje Ödevi 2</title>
+<style>
+
+.cards {
+    border: 5px outset black;
+    background-color: lightblue;
+    text-align: center;
+}
+
+</style>
+</head>
+
+  <body>
+
+    {% extends "template.html" %}
+    
+    {% block content %}
+
+    <div>
+        {% for datas in data %} 
+        
+        <div class="cards" style="width: 18rem;">
+            
+            <span> <b> calldate </b> {{ datas['calldate'] }}  </span>
+            <p> <b> called_num </b> {{ datas ['called_num'] }}  </p>
+            <p> <b> callid </b> {{ datas ['callid'] }} </p>
+            <p> <b> answered </b> {{ datas ['answered'] }} </p>
+            <p> <b> duration </b>  {{ datas ['duration'] }} </p>
+        
+        </div>
+
+  
+        
+        {% endfor %} 
+    </div>
+    
+    {% endblock content %}
+
+  </body>
+</html>
+
+
+
